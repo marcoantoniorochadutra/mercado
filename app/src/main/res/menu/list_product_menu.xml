@@ -3,8 +3,8 @@
 
     <item
         android:id="@+id/activity_list_product_update"
-        android:title="Alterar" />
+        android:title="@string/activity_list_product_update" />
     <item
         android:id="@+id/activity_list_product_delete"
-        android:title="Excluir" />
+        android:title="@string/activity_list_product_delete" />
 </menu>

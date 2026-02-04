@@ -42,16 +42,18 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+
+    implementation(libs.javafaker)
+    implementation(libs.commons.collections4)
+    implementation(libs.commons.lang3)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    compileOnly("org.projectlombok:lombok:1.18.42")
-    annotationProcessor("org.projectlombok:lombok:1.18.42")
-    testCompileOnly("org.projectlombok:lombok:1.18.42")
-    testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
+    compileOnly(libs.projectlombok.lombok)
+    annotationProcessor(libs.projectlombok.lombok)
+    testCompileOnly(libs.projectlombok.lombok)
+    testAnnotationProcessor(libs.projectlombok.lombok)
 
-    implementation("com.github.javafaker:javafaker:1.0.2")
-    implementation("org.apache.commons:commons-collections4:4.5.0")
-    implementation("org.apache.commons:commons-lang3:3.20.0")
 }

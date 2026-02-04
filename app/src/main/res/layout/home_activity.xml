@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".view.activity.HomeActivity">
+    tools:context=".ui.activity.HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
-                android:text="Ir para PRODUTOS"
+                android:text="@string/activity_home_product"
                 android:textIsSelectable="false"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
-                android:text="Ir para FORNECEDORES"
+                android:text="@string/activity_home_supplier"
                 android:textIsSelectable="false"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
-                android:text="Ir para CHECKOUT"
+                android:text="@string/activity_home_checkout"
                 android:textIsSelectable="false"
                 android:textSize="24sp"
                 android:textStyle="bold" />

@@ -1,4 +1,4 @@
-package com.mbd.mercado.view.activity;
+package com.mbd.mercado.ui.activity;
 
 import android.os.Bundle;
 import android.widget.TextView;

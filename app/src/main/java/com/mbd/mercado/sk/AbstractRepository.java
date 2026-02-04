@@ -9,26 +9,25 @@ public abstract class AbstractRepository<T extends DatabaseEntity> {
 
     public abstract List<T> getRepository();
 
-    public T save(T entity) {
-        getRepository().removeIf(item -> item.equals(entity));
-        getRepository().add(entity);
-        return entity;
+    public void save(T entity) {
+        this.getRepository().removeIf(item -> item.equals(entity));
+        this.getRepository().add(entity);
     }
 
     public boolean delete(T entity) {
-        return getRepository().removeIf(item -> item.equals(entity));
+        return this.getRepository().removeIf(item -> item.equals(entity));
     }
 
     public boolean findById(UUID id) {
-        return getRepository().stream().anyMatch(item -> item.getId().equals(id));
+        return this.getRepository().stream().anyMatch(item -> item.getId().equals(id));
     }
 
     public boolean deleteById(UUID id) {
-        return getRepository().removeIf(item -> item.getId().equals(id));
+        return this.getRepository().removeIf(item -> item.getId().equals(id));
     }
 
     public List<T> findAll() {
-        return unmodifiableList(getRepository());
+        return unmodifiableList(this.getRepository());
     }
 
 }

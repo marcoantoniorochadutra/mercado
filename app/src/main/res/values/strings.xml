@@ -43,4 +43,16 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="create_product_activity_description">Insira uma descrição:</string>
+    <string name="create_product_activity_description_input">Descrição do produto</string>
+    <string name="create_product_activity_value">Insira o valor do product:</string>
+    <string name="create_product_activity_value_input">Valor do produto</string>
+    <string name="create_product_activity_category">Escolha a categoria do product:</string>
+    <string name="create_product_activity_button_save">Salvar</string>
+    <string name="floatbutton">FloatButton</string>
+    <string name="activity_home_product">Ir para PRODUTOS</string>
+    <string name="activity_home_supplier">Ir para FORNECEDORES</string>
+    <string name="activity_home_checkout">Ir para CHECKOUT</string>
+    <string name="activity_list_product_update">Alterar</string>
+    <string name="activity_list_product_delete">Excluir</string>
 </resources>

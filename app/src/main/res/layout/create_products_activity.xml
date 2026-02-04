@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".view.activity.CreateProductActivity">
+    tools:context=".ui.activity.CreateProductActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -31,7 +31,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:orientation="vertical">
@@ -40,35 +39,39 @@
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Insira uma descrição:" />
+                    android:text="@string/create_product_activity_description" />
 
                 <EditText
                     android:id="@+id/create_product_activity_description_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
+                    android:autofillHints="Descrição do produto"
                     android:ems="10"
+                    android:hint="@string/create_product_activity_description_input"
                     android:inputType="text" />
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Insira o valor do product:" />
+                    android:text="@string/create_product_activity_value" />
 
                 <EditText
                     android:id="@+id/create_product_activity_value_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
+                    android:autofillHints="Valor do produto"
                     android:ems="10"
+                    android:hint="@string/create_product_activity_value_input"
                     android:inputType="numberDecimal" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Escolha a categoria do product:" />
+                    android:text="@string/create_product_activity_category" />
 
                 <Spinner
                     android:id="@+id/create_product_activity_category_dropdown"
@@ -83,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#92C9F6"
-                    android:text="Salvar"
+                    android:text="@string/create_product_activity_button_save"
                     android:textColor="@color/black" />
             </LinearLayout>
         </ScrollView>
@@ -97,7 +100,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/floatbutton"
         app:srcCompat="@android:drawable/ic_input_add" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

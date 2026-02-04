@@ -2,6 +2,7 @@ package com.mbd.mercado.sk;
 
 import static java.util.Objects.isNull;
 
+import android.content.Context;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,10 +14,24 @@ import java.math.BigDecimal;
 
 public class MbdActivity extends AppCompatActivity {
 
+    public static void notificarTela(Context ctx, String mensagem) {
+        Toast.makeText(ctx, mensagem, Toast.LENGTH_LONG).show();
+    }
+
+    public static void navigateToWithExtra(Context ctx, Class<?> destino, String key, Serializable value) {
+        Intent intent = new Intent(ctx, destino);
+        intent.putExtra(key, value);
+        ctx.startActivity(intent);
+    }
+
+    public static void navigateTo(Context ctx, Class<?> destino) {
+        ctx.startActivity(new Intent(ctx, destino));
+    }
 
     public void navigateTo(Class<?> destino) {
-        super.startActivity(new Intent(this, destino));
+        navigateTo(this, destino);
     }
+
 
     public BigDecimal inputValueBigDecimal(EditText editText) {
         if (isNull(editText) || editText.getText().toString().isEmpty())
@@ -33,18 +48,7 @@ public class MbdActivity extends AppCompatActivity {
         return editText.getText().toString();
     }
 
-    public void notificarTela(String mensagem) {
-        Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show();
-    }
-
-    protected void navigateToWithExtra(Class<?> destino, String key, Serializable value) {
-        Intent intent = new Intent(this, destino);
-        intent.putExtra(key, value);
-
-        super.startActivity(intent);
-    }
-
-    protected <T extends Serializable> T buscarObjetoIntent(String key, Class<T> value) {
+    protected <T extends Serializable> T retrieveObjectFromIntent(String key, Class<T> value) {
         Intent intent = super.getIntent();
         return intent.getSerializableExtra(key, value);
     }

@@ -7,17 +7,15 @@ import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.mbd.mercado.R;
-
 import java.util.List;
 
 public abstract class CustomAdapterBase<T> extends BaseAdapter {
 
-    public CustomAdapterBase(Context context) {
+    protected CustomAdapterBase(Context context) {
         this.context = context;
     }
 
-    protected Context context;
+    protected final Context context;
 
     public abstract List<T> getDataList();
 
@@ -36,16 +34,23 @@ public abstract class CustomAdapterBase<T> extends BaseAdapter {
         return 0;
     }
 
-    public void clear() {
+    private void clear() {
         this.getDataList().clear();
     }
 
-    public void addAll(List<T> itemsToAdd) {
+    private void addAll(List<T> itemsToAdd) {
         this.getDataList().addAll(itemsToAdd);
+    }
+
+    public void atualizarItens(List<T> novosItems) {
+        this.clear();
+        this.addAll(novosItems);
+        this.notifyDataSetChanged();
     }
 
     public void delete(T productToDelete) {
         this.getDataList().remove(productToDelete);
+        this.notifyDataSetChanged();
     }
 
     protected void updateTextView(View view, int id, String textToSet) {
